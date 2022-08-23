@@ -12,6 +12,6 @@ public class Controller {
 
     @GetMapping
     public ResponseEntity<String> process(){
-        return ResponseEntity.ok("Nanana1");
+        return ResponseEntity.ok("Nanana2");
     }
 }
