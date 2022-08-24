@@ -6,12 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 @RequestMapping(value = "/")
 public class Controller {
 
     @GetMapping
-    public ResponseEntity<String> process(){
-        return ResponseEntity.ok("This is just a test");
+    public ResponseEntity<Dto> process(){
+        Dto dto = new Dto();
+        dto.setMessage("This is a test, let's see if it works!");
+        dto.setDate(new Date());
+        return ResponseEntity.ok(dto);
     }
 }
