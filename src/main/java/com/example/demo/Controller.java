@@ -15,7 +15,7 @@ public class Controller {
     @GetMapping
     public ResponseEntity<Dto> process(){
         Dto dto = new Dto();
-        dto.setMessage("This is a test, let's see this change!");
+        dto.setMessage("This is a test!");
         dto.setDate(new Date());
         return ResponseEntity.ok(dto);
     }
