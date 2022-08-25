@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  become_user: ec2-user
+
+  tasks:
+  - name: create docker image
+    command: docker build -t tomcat:latest /home/ec2-user
+    args:
+      chdir: /home/ec2-user
+
+  - name: create tag to push image into dockerhub
+    command: docker tag tomcat:latest cvintilianrosca/tomcat:latest
+
+  - name: push image to dockerhub
+    command: docker push cvintilianrosca/tomcat:latest
