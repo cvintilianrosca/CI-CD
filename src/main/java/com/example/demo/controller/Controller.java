@@ -11,7 +11,7 @@ import java.util.Date;
 @RestController
 @RequestMapping(value = "/")
 public class Controller {
-    private static final String THIS_IS_A_TEST = "This is a second test!";
+    private static final String THIS_IS_A_TEST = "This is a third test!";
     @GetMapping
     public ResponseEntity<DemoDto> process(){
         final DemoDto dto = new DemoDto();
