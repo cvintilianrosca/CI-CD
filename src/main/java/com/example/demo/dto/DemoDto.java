@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Dto {
+public class DemoDto {
     private String message;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Date date;
